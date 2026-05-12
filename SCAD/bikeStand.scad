@@ -33,21 +33,32 @@ CRADLE_NUT_WIDTH = 70;
 //Thickness (height) of the nut below the cradle (This nut will require supports.  Set it to 0 to omit the nut)
 CRADLE_NUT_THICK = 0;
 
+/* [Color Control] */
+//This section is used to automatically render colors/parts separately.  You shouldn't need to touch these values.
+CC_COLOR_COUNT = 0;
+
+//0 renders all colors.  Individual colors can be rendered separately by setting this to each index up to CC_COLOR_COUNT
+CC_COLOR = 0;
+
 
 /*[Hidden]*/
 $fn = 200;
 
 module main()
 {
-    
-    union()
+    if (CC_COLOR == 0 || CC_COLOR == 1)
     {
-        base(BASE_DIA,BASE_THICK,BASE_HOLE_DIA,BASE_HOLE_DIST_RATIO,STEM_HEIGHT,STEM_DIA,BASE_RELIEF_RAD,STEM_THREAD_PITCH,STEM_THREAD_RATIO);
+        union()
+        {
+            base(BASE_DIA,BASE_THICK,BASE_HOLE_DIA,BASE_HOLE_DIST_RATIO,STEM_HEIGHT,STEM_DIA,BASE_RELIEF_RAD,STEM_THREAD_PITCH,STEM_THREAD_RATIO);
+        }
     }
-    
-    translate([BASE_DIA+20,0,0])    union()
+    if (CC_COLOR == 0 || CC_COLOR == 2)
     {
-        cradle(CRADLE_X,CRADLE_Y,CRADLE_Z,CRADLE_WALL_THICK,CRADLE_SLOT_WIDTH,STEM_DIA,STEM_HEIGHT,STEM_THREAD_PITCH,STEM_THREAD_RATIO,CRADLE_NUT_THICK,CRADLE_NUT_WIDTH);
+        translate([BASE_DIA+20,0,0])    union()
+        {
+            cradle(CRADLE_X,CRADLE_Y,CRADLE_Z,CRADLE_WALL_THICK,CRADLE_SLOT_WIDTH,STEM_DIA,STEM_HEIGHT,STEM_THREAD_PITCH,STEM_THREAD_RATIO,CRADLE_NUT_THICK,CRADLE_NUT_WIDTH);
+        }
     }
 }
 
