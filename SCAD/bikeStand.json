@@ -1,0 +1,35 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "Small Version": {
+            "BASE_DIA": "175",
+            "BASE_HOLE_DIA": "20",
+            "BASE_RELIEF_RAD": "40",
+            "BASE_THICK": "8",
+            "CRADLE_SLOT_WIDTH": "20",
+            "CRADLE_WALL_THICK": "3",
+            "CRADLE_X": "40",
+            "CRADLE_Y": "20",
+            "CRADLE_Z": "48",
+            "STEM_DIA": "70",
+            "STEM_HEIGHT": "70",
+            "STEM_THREAD_PITCH": "7",
+            "STEM_THREAD_RATIO": "0.90000000000000002"
+        },
+        "Large Version": {
+            "BASE_DIA": "220",
+            "BASE_HOLE_DIA": "20",
+            "BASE_RELIEF_RAD": "55",
+            "BASE_THICK": "8",
+            "CRADLE_SLOT_WIDTH": "20",
+            "CRADLE_WALL_THICK": "3",
+            "CRADLE_X": "40",
+            "CRADLE_Y": "20",
+            "CRADLE_Z": "48",
+            "STEM_DIA": "70",
+            "STEM_HEIGHT": "80",
+            "STEM_THREAD_PITCH": "7",
+            "STEM_THREAD_RATIO": "0.90000000000000002"
+        }
+    }
+}
